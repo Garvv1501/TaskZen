@@ -6,6 +6,8 @@ It combines task management with a modern dashboard experience featuring live pr
 
 ## Live Demo
 
+https://garvv1501.github.io/TaskZen/
+
 ---
 
 # 🚀 Features
