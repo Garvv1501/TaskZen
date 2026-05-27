@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>TaskZen</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- CHART -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- PARTICLES -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+</head>
+
+<body>
+
+  <!-- PARTICLES -->
+  <div id="particles-js"></div>
+
+  <!-- MAIN DASHBOARD -->
+  <div class="dashboard">
+
+    <!-- LEFT PANEL -->
+    <div class="left-panel">
+
+      <!-- QUOTE -->
+      <div class="glass-card quote-box">
+
+        <div class="quote-icon">❝</div>
+
+        <p id="quoteText">
+          Discipline today, freedom tomorrow.
+        </p>
+
+      </div>
+
+      <!-- CLOCK -->
+      <div class="glass-card clock-box">
+
+        <h2 id="clock">
+          00:00:00
+        </h2>
+
+        <p id="date">
+          Sunday, 18 May 2025
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- CENTER PANEL -->
+    <div class="center-panel">
+
+      <div class="todo-app">
+
+        <!-- HEADER -->
+        <div class="top-bar">
+
+          <div>
+
+            <h1>TaskZen ✨</h1>
+
+            <p>
+              Plan. Focus. Achieve.
+            </p>
+
+          </div>
+
+          <!-- THEME -->
+          <button id="themeToggle">
+            🌙
+          </button>
+
+        </div>
+
+        <!-- INPUT -->
+        <div class="input-section">
+
+          <input
+            type="text"
+            id="taskInput"
+            placeholder="What's on your mind?"
+          />
+
+          <button id="addTaskBtn">
+            +
+          </button>
+
+        </div>
+
+        <!-- FILTERS -->
+        <div class="filters">
+
+          <button
+            class="filter-btn active"
+            data-filter="all"
+          >
+            All
+          </button>
+
+          <button
+            class="filter-btn"
+            data-filter="completed"
+          >
+            Completed
+          </button>
+
+          <button
+            class="filter-btn"
+            data-filter="pending"
+          >
+            Pending
+          </button>
+
+        </div>
+
+        <!-- PROGRESS -->
+        <div class="progress-section">
+
+          <div class="progress-info">
+
+            <span id="taskCounter">
+              0 / 0 Completed
+            </span>
+
+          </div>
+
+          <div class="progress-bar">
+
+            <div id="progressFill"></div>
+
+          </div>
+
+        </div>
+
+        <!-- TASKS -->
+        <ul id="taskList" class="task-list"></ul>
+
+        <!-- FOOTER -->
+        <div class="footer-text">
+          Small steps every day lead to big changes 🚀
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="right-panel">
+
+      <!-- STATS -->
+      <div class="glass-card stats-box">
+
+        <h3>Productivity Stats</h3>
+
+        <div class="stats">
+
+          <div class="stat-item">
+
+            <h2 id="totalTasks">
+              0
+            </h2>
+
+            <p>Total</p>
+
+          </div>
+
+          <div class="stat-item">
+
+            <h2 id="completedTasks">
+              0
+            </h2>
+
+            <p>Completed</p>
+
+          </div>
+
+          <div class="stat-item">
+
+            <h2 id="pendingTasks">
+              0
+            </h2>
+
+            <p>Pending</p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- GRAPH -->
+      <div class="glass-card graph-box">
+
+        <h3>Progress Graph</h3>
+
+        <canvas id="taskChart"></canvas>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+
+</body>
+
+</html>
